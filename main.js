@@ -41,3 +41,4 @@ function playRound(humanChoice, computerChoice){
 }
 
 playRound(humanChoice, computerChoice);
+
