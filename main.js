@@ -10,18 +10,34 @@ let computerChoice = getComputerChoice(); //store the random Computer choice int
 
 
 // Step 2: Get human choice
+let humanChoice = prompt("Enter your choice:") // Gets the player choice
 
-function getHumanChoice(){
-    let humanChoice = prompt("Enter your choice:") // Gets the player choice
-     if(
+
+
+
+// Step 3: Play single round
+
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound(humanChoice, computerChoice){
+    if(
         humanChoice === "scissor" && computerChoice === "paper" || 
         humanChoice === "paper" && computerChoice === "rock" ||
         humanChoice === "rock" && computerChoice === "scissor"
-     ){ // Checks the condition for win situation
-        console.log("Congratulation!! You Won!!")
-     }else{
-        console.log("Better luck next time <3");
-        
-     }
+    ){
+        humanScore++;
+        console.log(`Congratulation!! You Won!! ${humanChoice} beats ${computerChoice}`);
+    }
+    else if(humanChoice === computerChoice){
+        console.log("It's a tie!");
+    }
+    else{
+        computerScore++;
+        console.log(`Better luck next time <3. ${computerChoice} beats ${humanChoice}`);
+    }
+    console.log(`Your score is ${humanScore}`);
+    console.log(`Computer score is ${computerScore}`);
 }
-getHumanChoice();
+
+playRound(humanChoice, computerChoice);
