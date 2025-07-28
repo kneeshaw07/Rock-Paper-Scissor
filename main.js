@@ -8,3 +8,21 @@ function getComputerChoice(){
 
 let computerChoice = getComputerChoice(); //store the random Computer choice into computerChoice variable
 
+
+// Step 2: Get human choice
+
+function getHumanChoice(){
+    let humanChoice = prompt("Enter your choice:")
+     if(
+        humanChoice === "scissor" && computerChoice === "paper" || 
+        humanChoice === "paper" && computerChoice === "rock" ||
+        humanChoice === "rock" && computerChoice === "scissor"
+     ){
+        console.log("Congratulation!! You Won!!")
+     }else{
+        console.log("Better luck next time <3");
+        
+     }
+}
+
+getHumanChoice();
