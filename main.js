@@ -1,7 +1,10 @@
-function getRandomArbitrary(min, max) {
-  return Math.floor(Math.random() * (max - min) + min);
+// Step 1: Logic to get random choice
+
+function getComputerChoice(){
+    let choices = ["rock", "paper", "scissor"]
+    let randomIndex = Math.floor(Math.random() * choices.length)
+    return(choices[randomIndex])
 }
 
-let randomVal = getRandomArbitrary(0,2);
+let computerChoice = getComputerChoice(); //store the random Computer choice into computerChoice variable
 
-console.log(randomVal);
