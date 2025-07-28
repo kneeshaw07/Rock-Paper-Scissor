@@ -12,17 +12,16 @@ let computerChoice = getComputerChoice(); //store the random Computer choice int
 // Step 2: Get human choice
 
 function getHumanChoice(){
-    let humanChoice = prompt("Enter your choice:")
+    let humanChoice = prompt("Enter your choice:") // Gets the player choice
      if(
         humanChoice === "scissor" && computerChoice === "paper" || 
         humanChoice === "paper" && computerChoice === "rock" ||
         humanChoice === "rock" && computerChoice === "scissor"
-     ){
+     ){ // Checks the condition for win situation
         console.log("Congratulation!! You Won!!")
      }else{
         console.log("Better luck next time <3");
         
      }
 }
-
 getHumanChoice();
